@@ -1,0 +1,7 @@
+/web-app/WEB-INF
+*.log
+*.iml
+/*.zip
+/*.zip.sha1
+/plugin.xml
+/target
