@@ -11,6 +11,8 @@ Include this plugin with the following, the plugin will find the Sauce Labs cred
 
 ```
 plugins {
-    test ":geb-saucelabs:0.1"
+    test(":geb-saucelabs:0.1") {
+        excludes "geb-core" // use the application geb version
+    }
 }
 ```

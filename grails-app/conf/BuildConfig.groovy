@@ -28,7 +28,9 @@ grails.project.dependency.resolution = {
       mavenRepo "http://repository-saucelabs.forge.cloudbees.com/release"
     }
     dependencies {
-      compile "org.gebish:geb-core:0.9.3"
+      compile("org.gebish:geb-core:[0.9.3,)") {
+        export = false
+      }
       compile "com.saucelabs:sauce_junit:2.1.4"
       compile("com.saucelabs:sauce-connect:3.1.32") {
         excludes "jetty"

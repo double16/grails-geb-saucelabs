@@ -118,7 +118,7 @@ class SauceGebTestService implements GrailsBuildListener {
         }
 
         // Update the capabilities with application information
-        Map caps = args.find({ it instanceof Map })
+        Map caps = args[args.length-1] instanceof Map ? args[args.length-1] : null
         if (!caps) {
           caps = [:]
           args = Arrays.copyOf(args, args.length+1)
