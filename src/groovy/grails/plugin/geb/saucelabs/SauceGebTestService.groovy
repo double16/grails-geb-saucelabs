@@ -18,6 +18,7 @@ import org.openqa.selenium.remote.RemoteWebDriver
  */
 class SauceGebTestService implements GrailsBuildListener {
   boolean verboseMode = false
+  boolean useSauceConnect = true
 
   /** Updated by a TestFailure event. */
   private boolean testsFailed = false
@@ -79,6 +80,9 @@ class SauceGebTestService implements GrailsBuildListener {
    * @return true if the connection was established
    */
   boolean openSauceConnect() {
+    if (!useSauceConnect) {
+      return false
+    }
     boolean connected = false
     try {
       SauceTunnelManager manager = new SauceConnectTwoManager();

@@ -3,7 +3,7 @@ grails-geb-saucelabs
 
 Grails plugin to provide better [Sauce Labs](http://saucelabs.com) support when using [Geb](http://gebish.org).
 
-1. Test results of pass or fail are updated for the session.
+1. Test results of pass or fail are updated.
 2. Application name and version are included as the job name and build, unless specified otherwise.
 3. Sauce Connect is started and stopped when functional tests are run. This alleviates the need to run Sauce Connect outside of the grails process.
 
@@ -15,4 +15,9 @@ plugins {
         excludes "geb-core" // use the application geb version
     }
 }
+```
+
+Sauce Connect will need to be provided outside of a single Grails process if concurrent test are run. Add the following to BuildConfig.groovy to do so:
+```
+grails.plugin.'geb-saucelabs'.useSauceConnect = false
 ```
