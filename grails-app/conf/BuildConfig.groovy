@@ -35,7 +35,9 @@ grails.project.dependency.resolution = {
       compile("com.saucelabs:sauce-connect:3.1.32") {
         excludes "jetty"
       }
-      compile "com.saucelabs:ci-sauce:1.74"
+      compile("com.saucelabs:ci-sauce:1.74") {
+        transitive = false
+      }
     }
 
     plugins {
