@@ -31,12 +31,9 @@ grails.project.dependency.resolution = {
       compile("org.gebish:geb-core:[0.9.3,)") {
         export = false
       }
-      compile "com.saucelabs:sauce_junit:2.1.4"
-      compile("com.saucelabs:sauce-connect:3.1.32") {
-        excludes "jetty"
-      }
+      compile "com.saucelabs:sauce_junit:2.1.10"
       compile("com.saucelabs:ci-sauce:1.74") {
-        transitive = false
+        excludes "sebuilder-interpreter"
       }
     }
 

@@ -1,23 +1,24 @@
 grails-geb-saucelabs
 ====================
 
-Grails plugin to provide better [Sauce Labs](http://saucelabs.com) support when using [Geb](http://gebish.org).
+Grails plugin to provide additional [Sauce Labs](http://saucelabs.com) support when using [Geb](http://gebish.org).
 
 1. Test results of pass or fail are updated.
 2. Application name and version are included as the job name and build, unless specified otherwise.
 3. Sauce Connect is started and stopped when functional tests are run. This alleviates the need to run Sauce Connect outside of the grails process.
 
-Include this plugin with the following, the plugin will find the Sauce Labs credentials from the SauceLabsDriverFactory calls.
+Include this plugin with the following in BuildConfig.groovy. No configuration is required in Config.groovy. The credentials for Sauce Labs are scraped from SauceLabsDriverFactory.
 
 ```
 plugins {
     test(":geb-saucelabs:0.1") {
-        excludes "geb-core" // use the application geb version
+        excludes "geb-core" // use the application specified geb version
     }
 }
 ```
 
-Sauce Connect will need to be provided outside of a single Grails process if concurrent test are run. Add the following to BuildConfig.groovy to do so:
+Sauce Connect will need to be provided outside of the Grails process if concurrent test processes are run. Add the following to BuildConfig.groovy to disable Sauce Connect. The tests will pick up an existing Sauce Connect tunnel.
+See [grails-saucelabs-demo](https://github.com/double16/grails-saucelabs-demo) for an example of concurrent tests.
 ```
 grails.plugin.'geb-saucelabs'.useSauceConnect = false
 ```

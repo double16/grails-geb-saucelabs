@@ -1,6 +1,6 @@
 package grails.plugin.geb.saucelabs
 
-import com.saucelabs.ci.sauceconnect.SauceConnectTwoManager
+import com.saucelabs.ci.sauceconnect.SauceConnectFourManager
 import com.saucelabs.ci.sauceconnect.SauceTunnelManager
 import com.saucelabs.common.Utils
 import com.saucelabs.saucerest.SauceREST
@@ -85,7 +85,7 @@ class SauceGebTestService implements GrailsBuildListener {
     }
     boolean connected = false
     try {
-      SauceTunnelManager manager = new SauceConnectTwoManager();
+      SauceTunnelManager manager = new SauceConnectFourManager();
       File sauceConnectJar = null // it will find the JAR in the classpath
       String options = null
       String httpsProtocol = null
