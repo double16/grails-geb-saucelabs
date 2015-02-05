@@ -11,7 +11,7 @@ Include this plugin with the following in BuildConfig.groovy. No configuration i
 
 ```
 plugins {
-    test(":geb-saucelabs:0.1") {
+    test(":geb-saucelabs:0.2") {
         excludes "geb-core" // use the application specified geb version
     }
 }
