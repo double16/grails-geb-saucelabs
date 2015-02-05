@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
         export = false
       }
       compile "com.saucelabs:sauce_java_common:2.1.10"
-      compile("com.saucelabs:ci-sauce:1.84") {
+      compile("com.saucelabs:ci-sauce:1.90") {
         excludes "sebuilder-interpreter"
       }
     }
