@@ -22,3 +22,10 @@ See [grails-saucelabs-demo](https://github.com/double16/grails-saucelabs-demo) f
 ```
 grails.plugin.'geb-saucelabs'.useSauceConnect = false
 ```
+
+Changes
+=======
+
+* 0.1 - Initial revision
+
+* 0.2 - Upgrade to Grails 2.4.4. Upgrade ci-sauce to 1.90, using version 4.3.6 of the Sauce Connect VPN.
