@@ -1,6 +1,8 @@
 grails-geb-saucelabs
 ====================
 
+[ ![Codeship Status for double16/grails-geb-saucelabs](https://codeship.com/projects/72df5260-9384-0132-5ea3-3ef2b4144a88/status?branch=master)](https://codeship.com/projects/62270)
+
 Grails plugin to provide additional [Sauce Labs](http://saucelabs.com) support when using [Geb](http://gebish.org).
 
 1. Test results of pass or fail are updated.
