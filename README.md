@@ -31,3 +31,6 @@ Changes
 * 0.1 - Initial revision
 
 * 0.2 - Upgrade to Grails 2.4.4. Upgrade ci-sauce to 1.90, using version 4.3.6 of the Sauce Connect VPN.
+
+* - Upgrade to Grails 2.5.5, ci-sauce to 1.120, using version 4.3.16 of the Sauce Connect VPN.
+

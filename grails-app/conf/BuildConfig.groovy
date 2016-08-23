@@ -32,17 +32,17 @@ grails.project.dependency.resolution = {
         export = false
       }
       compile "com.saucelabs:sauce_java_common:2.1.10"
-      compile("com.saucelabs:ci-sauce:1.90") {
+      compile("com.saucelabs:ci-sauce:1.120") {
         excludes "sebuilder-interpreter"
       }
     }
 
     plugins {
-        build(":release:3.0.1",
-              ":rest-client-builder:1.0.3") {
+        build(":release:3.1.2",
+              ":rest-client-builder:2.1.1") {
             export = false
         }
-        test(":codenarc:0.22") {
+        test(":codenarc:0.25.2") {
           export = false
         }
     }
