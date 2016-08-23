@@ -6,10 +6,10 @@ machine:
 
 dependencies:
   pre:
-    - ./grailsw refresh-dependencies
+    - ./grailsw refresh-dependencies --non-interactive
   cache_directories:
     - "~/.grails"
 
 test:
   override:
-    - ./grailsw -Dgrails.project.test.reports.dir=$CIRCLE_TEST_REPORTS test-app
+    - ./grailsw -Dgrails.project.test.reports.dir=$CIRCLE_TEST_REPORTS test-app --non-interactive
