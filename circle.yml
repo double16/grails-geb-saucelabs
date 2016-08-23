@@ -12,4 +12,4 @@ dependencies:
 
 test:
   override:
-    - ./grailsw -Dgrails.project.test.reports.dir=$CIRCLE_TEST_REPORTS/$BROWSER test-app
+    - ./grailsw -Dgrails.project.test.reports.dir=$CIRCLE_TEST_REPORTS test-app
