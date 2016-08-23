@@ -1,0 +1,15 @@
+machine:
+  java:
+    version: openjdk8
+  environment:
+    TERM: dumb
+
+dependencies:
+  pre:
+    - ./grailsw refresh-dependencies
+  cache_directories:
+    - "~/.grails"
+
+test:
+  override:
+    - ./grailsw -Dgrails.project.test.reports.dir=$CIRCLE_TEST_REPORTS/$BROWSER test-app
