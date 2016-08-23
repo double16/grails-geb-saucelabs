@@ -1,7 +1,7 @@
 grails-geb-saucelabs
 ====================
 
-[ ![Codeship Status for double16/grails-geb-saucelabs](https://codeship.com/projects/72df5260-9384-0132-5ea3-3ef2b4144a88/status?branch=master)](https://codeship.com/projects/62270)
+[![CircleCI](https://circleci.com/gh/double16/grails-geb-saucelabs.svg?style=svg&circle-token=fd11198035831f2dbf4e9e95ede1634cc11056f4)](https://circleci.com/gh/double16/grails-geb-saucelabs)
 
 Grails plugin to provide additional [Sauce Labs](http://saucelabs.com) support when using [Geb](http://gebish.org).
 
