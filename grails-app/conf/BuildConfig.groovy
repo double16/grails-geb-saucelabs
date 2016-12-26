@@ -31,8 +31,8 @@ grails.project.dependency.resolution = {
       compile("org.gebish:geb-core:[0.9.3,)") {
         export = false
       }
-      compile "com.saucelabs:sauce_java_common:2.1.10"
-      compile("com.saucelabs:ci-sauce:1.120") {
+      compile "com.saucelabs:sauce_java_common:2.1.23"
+      compile("com.saucelabs:ci-sauce:1.123") {
         excludes "sebuilder-interpreter"
       }
     }
@@ -42,7 +42,7 @@ grails.project.dependency.resolution = {
               ":rest-client-builder:2.1.1") {
             export = false
         }
-        test(":codenarc:0.25.2") {
+        test(":codenarc:0.26.0") {
           export = false
         }
     }

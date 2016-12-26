@@ -85,11 +85,11 @@ class SauceGebTestService implements GrailsBuildListener {
     }
     boolean connected = false
     try {
-      SauceTunnelManager manager = new SauceConnectFourManager();
+      SauceTunnelManager manager = new SauceConnectFourManager()
       File sauceConnectJar = null // it will find the JAR in the classpath
       String options = null
       String httpsProtocol = null
-      manager.openConnection(username, accessKey, findFreePort(), sauceConnectJar, options, httpsProtocol, System.out, false /*verbose logging*/);
+      manager.openConnection(username, accessKey, findFreePort(), sauceConnectJar, options, httpsProtocol, System.out, false /*verbose logging*/)
       sauceConnectManager = manager
       connected = true
     } catch (IOException e) {
@@ -104,7 +104,7 @@ class SauceGebTestService implements GrailsBuildListener {
    */
   void closeSauceConnect() {
     if (sauceConnectManager) {
-      sauceConnectManager.closeTunnelsForPlan(username, null, System.out);
+      sauceConnectManager.closeTunnelsForPlan(username, null, System.out)
     }
   }
 
@@ -154,14 +154,14 @@ class SauceGebTestService implements GrailsBuildListener {
 
   void updateTestResults() {
     if (sessionId != null) {
-      Map<String, Object> updates = new HashMap<String, Object>();
-      updates.put("passed", !testsFailed);
-      Utils.addBuildNumberToUpdate(updates);
-      sauceREST.updateJobInfo(sessionId, updates);
+      Map<String, Object> updates = new HashMap<String, Object>()
+      updates.put("passed", !testsFailed)
+      Utils.addBuildNumberToUpdate(updates)
+      sauceREST.updateJobInfo(sessionId, updates)
 
       if (verboseMode) {
-        String authLink = sauceREST.getPublicJobLink(sessionId);
-        println("Job link: " + authLink);
+        String authLink = sauceREST.getPublicJobLink(sessionId)
+        println("Job link: " + authLink)
       }
     }
   }
